@@ -1,10 +1,10 @@
-# CoffeeLPT
+# CoffeeLPT-ArduinoMessages
 
 ## Small project demonstrating working with LPT Import, & Arduino with C#
 
 liaison and the possibility of working simultaneously and asynchronously
 
-**with :**  powerfull ``UI``
+**with :**  powerful ``UI``
 
 **Tools & stuff :**  ``WPF``  , ``MVVM`` , ``inpout32.dll  - 64`` , ``SerialPort`` ,  ``Arduino-mega/uno..`` , ``LiquidCrystal 16×2``
 
