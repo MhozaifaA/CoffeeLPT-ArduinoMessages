@@ -3,22 +3,38 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CoffeeLPT"
+        xmlns:local="clr-namespace:CoffeeLPT" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="200">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Row="0" ></Grid>
+        <Grid Row="0" >
+            <Button Width="80" Margin="20" Padding="0" Height="80" Name="CoffeeButton" Click="CoffeeButton_Click">
+                <Button.Content>
+                    <StackPanel>
+                        <TextBlock  FontSize="20" TextAlignment="Center">GO! to</TextBlock>
+                        <TextBlock Margin="0 10 0 0" TextAlignment="Center">CoffeeLPT</TextBlock>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Grid>
 
-        <StackPanel  Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Width="120" Margin="20" Content="Coffee"/>
-            <Button Width="120" Margin="20" Content="Three In One"/>
-            <Button Width="120" Margin="20" Content="Hot Chocolate"/>
-        </StackPanel>
+        <Grid Row="1" >
+            <Button x:Name="ArduinoButton" Click="ArduinoButton_Click" Width="80" Margin="20" Padding="0" Height="80"  Background="#0088cc" BorderBrush="#0088cc" BorderThickness="0"
+                      Style="{StaticResource MaterialDesignFloatingActionDarkButton}" >
+                    <Button.Content>
+                        <StackPanel>
+                        <TextBlock  FontSize="20"  TextAlignment="Center">GO! to</TextBlock>
+                        <materialDesign:PackIcon  HorizontalAlignment="Center" Foreground="White" Kind="Send" Width="25" Height="25" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+        </Grid>
+
 
 
     </Grid>

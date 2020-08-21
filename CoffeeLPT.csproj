@@ -121,12 +121,19 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resource\Arduino\ArduinoCompurerCommunication.ino" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\backCoffee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\coffee.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Com.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

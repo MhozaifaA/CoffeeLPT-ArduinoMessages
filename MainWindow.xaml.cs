@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeeLPT.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace CoffeeLPT
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void CoffeeButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowLunchCoffee win = new WindowLunchCoffee();
+            win.Show();
+        }
+
+        private void ArduinoButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowLunchCOM win = new WindowLunchCOM();
+            win.Show();
         }
     }
 }

@@ -93,7 +93,7 @@
             <Button Grid.Column="1" TabIndex="-1" Command="{Binding CommandSend}" IsDefault="True" Background="#0088cc" BorderBrush="#0088cc" BorderThickness="0" 
                     Margin="5" Width="40" Height="40" Padding="0" 
                   Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
-                  ToolTip="MaterialDesignFloatingActionDarkButton">
+                  ToolTip="send">
                                    <materialDesign:PackIcon Foreground="White" Kind="Send" Width="25" Height="25" />
             </Button>
 
