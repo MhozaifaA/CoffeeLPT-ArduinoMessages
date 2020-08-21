@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeLPT", "CoffeeLPT.csproj", "{00901CF6-4D16-4F37-B0C2-1DA0D65A7CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HzoHackSwiPlcs", "..\HzoHackSwiPlcs\HzoHackSwiPlcs.csproj", "{BF1119DD-E0E8-4321-8FF7-3CF0C677F447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00901CF6-4D16-4F37-B0C2-1DA0D65A7CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00901CF6-4D16-4F37-B0C2-1DA0D65A7CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00901CF6-4D16-4F37-B0C2-1DA0D65A7CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00901CF6-4D16-4F37-B0C2-1DA0D65A7CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1119DD-E0E8-4321-8FF7-3CF0C677F447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1119DD-E0E8-4321-8FF7-3CF0C677F447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1119DD-E0E8-4321-8FF7-3CF0C677F447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1119DD-E0E8-4321-8FF7-3CF0C677F447}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E9480D2-9A00-4A44-8E5C-26BACD72203D}
+	EndGlobalSection
+EndGlobal

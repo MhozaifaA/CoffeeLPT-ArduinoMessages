@@ -1,0 +1,112 @@
+﻿<Window x:Class="CoffeeLPT.View.WindowLunchCOM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeLPT.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:ViewModels="clr-namespace:CoffeeLPT.ViewModel"
+        WindowStyle="None"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        x:Name="Window"  Height="600" Width="400">
+    <Window.DataContext>
+        <ViewModels:LunchCOMViewModel/>
+    </Window.DataContext>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="100"  
+                      ResizeBorderThickness="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <ComboBox Grid.Row="0" TabIndex="-1"  ItemsSource="{Binding ListCOM}" WindowChrome.IsHitTestVisibleInChrome="True"
+                 materialDesign:HintAssist.Hint="COMs"  SelectedItem="{Binding SelectCOM,UpdateSourceTrigger=PropertyChanged}"  materialDesign:HintAssist.Foreground="#0088cc"
+                 IsEditable="True"  Margin="10 0"
+                 Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+            </ComboBox>
+
+
+            <Button Grid.Column="1" WindowChrome.IsHitTestVisibleInChrome="True"    Command="{Binding CommandConnection , Mode=OneWay}" CommandParameter="{Binding ElementName=Window}"
+                 Padding="0" Margin="0" TabIndex="-1" Style="{StaticResource MaterialDesignFlatAccentButton}" Height="Auto">
+                <Button.Content>
+                    <Border  Background="#0088cc"  CornerRadius="4" Padding="4">
+                        <TextBlock Text="{Binding TextConnection}" Foreground="White"></TextBlock>
+                    </Border>
+                </Button.Content>
+            </Button>
+
+            <Button TabIndex="-1" Grid.Column="2" WindowChrome.IsHitTestVisibleInChrome="True"  Command="{Binding CommandCloseWindow , Mode=OneWay}" CommandParameter="{Binding ElementName=Window}"
+                    Padding="0" Margin="0" Style="{StaticResource MaterialDesignFlatAccentButton}" Height="Auto">
+                <Button.Content>
+                    <materialDesign:PackIcon Foreground="#0088cc" Kind="CloseBox" Height="30" Width="30"></materialDesign:PackIcon>
+                </Button.Content>
+            </Button>
+
+        </Grid>
+
+
+        <ScrollViewer Grid.Row="1" TabIndex="-1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
+
+            <ItemsControl Grid.Row="1" TabIndex="-1"  ItemsSource="{Binding ListBot ,UpdateSourceTrigger=PropertyChanged}">
+
+                  <ItemsControl.ItemsPanel>
+                      <ItemsPanelTemplate>
+                          <StackPanel Orientation="Vertical" VerticalAlignment="Bottom"/>
+                      </ItemsPanelTemplate>
+                  </ItemsControl.ItemsPanel>
+
+                  <ItemsControl.ItemTemplate>
+                      <DataTemplate>
+                          <Border Margin="10 10" Background="#0088cc" HorizontalAlignment="Left" Height="40" Width="200" CornerRadius="12 12 12 0">
+                            <TextBlock Text="{Binding .}" Foreground="White" HorizontalAlignment="Left"
+                                       VerticalAlignment="Center" FontSize="14" FontWeight="Medium" Margin="10 0"></TextBlock>
+                          </Border>
+                      </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                  
+   
+
+              </ItemsControl>
+        </ScrollViewer>
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Grid.Column="1" TabIndex="-1" Command="{Binding CommandSend}" IsDefault="True" Background="#0088cc" BorderBrush="#0088cc" BorderThickness="0" 
+                    Margin="5" Width="40" Height="40" Padding="0" 
+                  Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                  ToolTip="MaterialDesignFloatingActionDarkButton">
+                                   <materialDesign:PackIcon Foreground="White" Kind="Send" Width="25" Height="25" />
+            </Button>
+
+
+            <Border Grid.Column="0" Background="LightGray"  Margin="10" CornerRadius="12" Padding="10 0">
+                <TextBox TabIndex="-2" Text="{Binding TextMessage,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" BorderThickness="0" 
+                         materialDesign:TextFieldAssist.UnderlineBrush="#0088cc" FontSize="14" MaxLength="32"/>
+            </Border>
+
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>
