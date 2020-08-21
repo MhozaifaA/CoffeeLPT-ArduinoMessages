@@ -126,12 +126,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HzoHackSwiPlcs\HzoHackSwiPlcs.csproj">
-      <Project>{BF1119DD-E0E8-4321-8FF7-3CF0C677F447}</Project>
-      <Name>HzoHackSwiPlcs</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\backCoffee.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
